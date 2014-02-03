@@ -14,12 +14,14 @@ class Front_Page_Plugin {
     global $config;
 
     if (!empty($config['front_page'])) {
+
+      $file = CONTENT_DIR . ltrim($config['front_page'],'/');
       // Get the file and content
-      if(is_dir(CONTENT_DIR . ltrim($config['front_page'],'/'))) {
-        $file = CONTENT_DIR . ltrim($config['front_page'],'/') .'/index'. CONTENT_EXT;
+      if(is_dir()) {
+        $file = $file .'/index'. CONTENT_EXT;
       }
       else {
-        $file = CONTENT_DIR . ltrim($config['front_page'],'/') . CONTENT_EXT;
+        $file = $file . CONTENT_EXT;
       }
 
       if(file_exists($file)) {
