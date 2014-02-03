@@ -17,7 +17,7 @@ class Front_Page_Plugin {
 
       $file = CONTENT_DIR . ltrim($config['front_page'],'/');
       // Get the file and content
-      if(is_dir()) {
+      if(is_dir($file)) {
         $file = $file .'/index'. CONTENT_EXT;
       }
       else {
