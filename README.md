@@ -28,3 +28,7 @@ You might also use
     $config['front_page'] = "/my";
     
 Then we'll use content in ```/content/my/index.md```
+
+Changelog
+---------
+22.02.2014 Now works with 404 pages
